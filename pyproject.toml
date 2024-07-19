@@ -1,0 +1,14 @@
+[tool.black]
+line-length = 120
+target-version = ['py312']
+skip-string-normalization = true
+exclude = "migrations"
+
+[tool.isort]
+profile = "black"
+skip = "__init__.py"
+multi_line_output = 3
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "apis.settings"
+python_files = ["tests/test_*.py"]
