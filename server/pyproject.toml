@@ -12,3 +12,4 @@ multi_line_output = 3
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "apis.settings"
 python_files = ["tests/test_*.py"]
+
