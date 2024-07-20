@@ -96,7 +96,11 @@ class TransferAPIView(APIView):
     def post(self, request):
         sender_id = request.data.get('sender_id')
         receiver_id = request.data.get('receiver_id')
-        print(sender_id, receiver_id)
+        if sender_id == receiver_id:
+            return Response(
+                {'success': False, 'message': 'Sender and receiver cannot be the same'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
         amount = request.data.get('amount')
         try:
             with atomic():
