@@ -18,8 +18,8 @@ from .models import Account, Transaction
 from .serializers import (
     AccountSerializer,
     TransactionSerializer,
-    TransfareResponseSerializer,
-    TransfareSerializer,
+    TransferResponseSerializer,
+    TransferSerializer,
 )
 
 
@@ -91,8 +91,8 @@ class TransactionRetrieve(RetrieveAPIView):
         return response
 
 
-@extend_schema(tags=['Transactions'], request=TransfareSerializer, responses=TransfareResponseSerializer)
-class TransfareAPIView(APIView):
+@extend_schema(tags=['Transactions'], request=TransferSerializer, responses=TransferResponseSerializer)
+class TransferAPIView(APIView):
     def post(self, request):
         sender_id = request.data.get('sender_id')
         receiver_id = request.data.get('receiver_id')

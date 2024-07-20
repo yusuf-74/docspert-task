@@ -32,12 +32,12 @@ class TransactionSerializer(FlexFieldsModelSerializer):
 
 
 # DOCUMENTATION SERIALIZERS
-class TransfareSerializer(serializers.Serializer):
+class TransferSerializer(serializers.Serializer):
     sender_id = serializers.IntegerField()
     receiver_id = serializers.IntegerField()
     amount = serializers.DecimalField(max_digits=14, decimal_places=2)
 
 
-class TransfareResponseSerializer(serializers.Serializer):
+class TransferResponseSerializer(serializers.Serializer):
     success = serializers.BooleanField()
     message = serializers.CharField()

@@ -5,7 +5,7 @@ from .views import (
     AccountRetrieveUpdate,
     TransactionList,
     TransactionRetrieve,
-    TransfareAPIView,
+    TransferAPIView,
 )
 
 urlpatterns = [
@@ -13,5 +13,5 @@ urlpatterns = [
     path('accounts/<uuid:pk>/', AccountRetrieveUpdate.as_view(), name='account-retrieve-update'),
     path('transactions/', TransactionList.as_view(), name='transaction-list'),
     path('transactions/<int:pk>/', TransactionRetrieve.as_view(), name='transaction-retrieve'),
-    path('transfare/', TransfareAPIView.as_view(), name='transfare'),
+    path('transfer/', TransferAPIView.as_view(), name='transfare'),
 ]
