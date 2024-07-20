@@ -53,7 +53,7 @@ const Accounts = () => {
             updated_at: dateTimeFormatter(item.updated_at),
             actions: (
                 <div key={item.id} className='d-flex justify-content-center align-items-center'>
-                    <button
+                    {/* <button
                         className="btn btn-warning btn-sm m-2"
                         onClick={() => {
                             setSelectedAccount(item)
@@ -61,7 +61,7 @@ const Accounts = () => {
                         }}
                     >
                         Edit
-                    </button>
+                    </button> */}
                     <button
                         className="btn btn-success btn-sm m-2"
                         onClick={() => {
