@@ -21,7 +21,7 @@ const NavBar = () => {
 
     return (
         <div>
-            <Navbar color={'dark'} dark={true} full={true} expand={'sm'} container={'fluid'} fixed={'top'}>
+            <Navbar color={'dark'} dark={true} expand={'sm'} container={'fluid'} fixed={'top'}>
                 <NavbarBrand href="/">DOCSPERT HEALTH</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
